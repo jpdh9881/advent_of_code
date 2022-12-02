@@ -2,6 +2,8 @@
 
 ## Day 1 and 2
 
+### To run
+
 ```
 node day01.js
 

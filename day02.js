@@ -1,3 +1,6 @@
+/**
+ * Answer to Day 2: https://adventofcode.com/2021/day/2
+ */
 import { open } from "node:fs/promises";
 
 // Part 1
