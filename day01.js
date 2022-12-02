@@ -22,12 +22,9 @@ try {
     const window1 = depths.slice(i, i + windowSize);
     const window2 = depths.slice(i + 1, i + 1 + windowSize);
 
-    let window1Sum = 0;
-    let window2Sum = 0;
-    for (let i = 0; i < windowSize; i++) {
-      window1Sum += window1[i];
-      window2Sum += window2[i];
-    }
+    let window1Sum = sum(window1);
+    let window2Sum = sum(window2);
+
     if (window2Sum > window1Sum) windowIncreases++;
   }
 
@@ -35,3 +32,11 @@ try {
 } finally {
   file?.close();
 }
+
+function sum(arr) {
+  let sum = 0;
+  for (let num of arr) {
+    sum += num;
+  }
+  return sum;
+};
